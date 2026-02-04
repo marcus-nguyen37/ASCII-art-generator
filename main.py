@@ -13,6 +13,8 @@ def main():
     else:
         print(f"Width input is invalid. Defaulting to {DEFAULT_WIDTH} px.")
 
+    reverse_input = input("Reverse ASCII mapping? (y/n): ").lower().strip()
+
     processor = ImageProcessor(path)
 
     try:
@@ -24,7 +26,7 @@ def main():
     processor.resize(new_width)
     processor.grayscale()
 
-    mapper = AsciiMapper()
+    mapper = AsciiMapper(reverse=reverse_input=="y")
     ascii_matrix = mapper.map_image(processor.image)
 
     renderer = AsciiRenderer(ascii_matrix)

@@ -21,7 +21,6 @@ class AsciiRenderer:
 
         with open(filename, 'w', encoding='utf-8') as file:
             file.write(self.to_string())
-            print("Saved ASCII string to file.")
 
     def print_ascii(self):
         # Prints to terminal
