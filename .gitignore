@@ -1,0 +1,9 @@
+# Ignore Python cache directories
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environment
+.venv/
+
+# Ignore generated ASCII output file
+ascii_image.txt

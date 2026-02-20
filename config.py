@@ -13,3 +13,6 @@ ASCII_RAMPS = {
 
 # You can still define a default name
 DEFAULT_RAMP_NAME = "default"
+
+# Recommended to keep at 0.55 to have ASCII art be correct ratio
+CHAR_SIZE_RATIO = 0.55

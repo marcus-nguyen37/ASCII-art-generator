@@ -1,5 +1,7 @@
 from PIL import Image
 
+from config import CHAR_SIZE_RATIO
+
 class ImageProcessor:
     """
     Handles loading, resizing and grayscaling images.
@@ -25,7 +27,7 @@ class ImageProcessor:
         
         width, height = self.image.size
         aspect_ratio = height / width
-        new_height = int(new_width * aspect_ratio * 0.4) # adjusting for char height. Replace 0.55 with non-magical variable
+        new_height = int(new_width * aspect_ratio * CHAR_SIZE_RATIO)
         self.image = self.image.resize((new_width, new_height))
 
     def grayscale(self):
